@@ -15,15 +15,22 @@ class ProductNamePlugin
         $this->storeManager = $storeManager;
     }
 
-    public function aroundGetName(Product $subject, callable $proceed, $result): string
+    public function aroundGetName(Product $subject, callable $proceed): string
     {
+        $result = $proceed();
         if($this->storeManager->getStore()->getCode() == 'uk')
         {
             return substr($result,0,15);
         }
-        else
-        {
-            return $result;
-        }
+        return $result;
+
+//        if($this->storeManager->getStore()->getCode() == 'uk')
+//        {
+//            return substr($result,0,15);
+//        }
+//        else
+//        {
+//            return $result;
+//        }
     }
 }
