@@ -34,9 +34,9 @@ class ProductList implements ActionInterface
         $to_display = array();
         $list = $this->getProductCollection();
         foreach ($list as $product) {
-            $product_id = $product->getId();
-            $product_name = $product->getName();
-            $to_display [] = array('id' => $product_id, 'name' => $product_name);
+//            $product_id = $product->getId();
+//            $product_name = $product->getName();
+            $to_display [] = ['id' => $product->getId(), 'name' => $product->getName()];
         }
         return $this->jsonFactory->create()->setJsonData(json_encode($to_display, JSON_PRETTY_PRINT));
     }
