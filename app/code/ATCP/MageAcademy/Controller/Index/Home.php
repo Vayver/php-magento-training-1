@@ -21,7 +21,7 @@ class Home implements ActionInterface
     }
     public function execute()
     {
-        $home_url = $this->storeManager->getStore()->getUrl();
-        $this->response->setRedirect($home_url)->sendResponse();
+        $homeUrl = $this->storeManager->getStore()->getUrl();
+        $this->response->setRedirect($homeUrl)->sendResponse();
     }
 }

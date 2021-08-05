@@ -49,11 +49,11 @@ class MyRegisterObserver implements ObserverInterface
 //        $this->message->addSuccessMessage('Registration complete. Log in to your account.');
 //        exit;
 //
-        $page_url = $this->url->getUrl('customer/account/login/');
+        $pageUrl = $this->url->getUrl('customer/account/login/');
         $this->message->addNoticeMessage('Registration complete. Log in to your account.');
 
 //        ---HTTP Response solution---
-        $this->response->setRedirect($page_url);
+        $this->response->setRedirect($pageUrl);
 //        ---ResultFactory solution---
 //        $resultRedirect = $this->resultFactory->create();
 //        $resultRedirect->setRedirect($page_url)->sendResponse();

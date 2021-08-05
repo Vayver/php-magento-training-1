@@ -23,21 +23,21 @@ class ProductList implements ActionInterface
 
     public function getProductCollection()
     {
-        $product_list = $this->collectionFactory->create();
-        $product_list->addAttributeToSelect('*');
-        $product_list->setPageSize(10);
-        return $product_list;
+        $productList = $this->collectionFactory->create();
+        $productList->addAttributeToSelect('*');
+        $productList->setPageSize(10);
+        return $productList;
     }
 
     public function execute()
     {
-        $to_display = array();
+        $toDisplay = array();
         $list = $this->getProductCollection();
         foreach ($list as $product) {
-//            $product_id = $product->getId();
-//            $product_name = $product->getName();
-            $to_display [] = ['id' => $product->getId(), 'name' => $product->getName()];
+//            $productId = $product->getId();
+//            $productName = $product->getName();
+            $toDisplay [] = ['id' => $product->getId(), 'name' => $product->getName()];
         }
-        return $this->jsonFactory->create()->setJsonData(json_encode($to_display, JSON_PRETTY_PRINT));
+        return $this->jsonFactory->create()->setJsonData(json_encode($toDisplay, JSON_PRETTY_PRINT));
     }
 }

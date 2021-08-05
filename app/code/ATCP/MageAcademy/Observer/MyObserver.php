@@ -12,7 +12,8 @@ class MyObserver implements ObserverInterface
     private $session;
     private $logger;
 
-    public function __construct(Session $session, LoggerInterface $logger)
+    public function __construct(Session $session,
+                                LoggerInterface $logger)
     {
         $this->session = $session;
         $this->logger = $logger;
@@ -20,9 +21,9 @@ class MyObserver implements ObserverInterface
 
     public function execute(Observer $observer)
     {
-        $user_id_by_observer = $observer->getCustomer()->getEntityId();
-        $user_id_by_session = $this->session->getCustomerId();
-        $log_time = date('H:i:s');
-        $this->logger->info("User id : $user_id_by_observer - $user_id_by_session logged in at $log_time");
+        $userIdByObserver = $observer->getCustomer()->getEntityId();
+        $userIdBySession = $this->session->getCustomerId();
+        $logTime = date('H:i:s');
+        $this->logger->info("User id : $userIdByObserver - $userIdBySession logged in at $logTime");
     }
 }
