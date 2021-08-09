@@ -2,4 +2,13 @@
     <event name="customer_login">
         <observer name="user_login_observer" instance="ATCP\MageAcademy\Observer\MyObserver" />
     </event>
+    <event name="registration_event">
+        <observer name="user_registration_observer" instance="ATCP\MageAcademy\Observer\MyRegisterObserver" />
+    </event>
+<!--    <event name="customer_login2">-->
+<!--        <observer name="user_registration_observer" instance="ATCP\MageAcademy\Observer\MyMailObserver" />-->
+<!--    </event>-->
+    <event name="controller_front_send_response_before">
+        <observer name="outputlog_oserver" instance="ATCP\MageAcademy\Observer\LogFromPage" />
+    </event>
 </config>
