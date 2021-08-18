@@ -1,6 +1,7 @@
-<h1>My first template</h1>
-<p1>Hello world!</p1>
+<h1>My first template with current time</h1>
 <div>
-    <input type="button" value="Click here!">
+    <?php
+        date_default_timezone_set('Europe/Warsaw');
+        echo date('Y-m-d H:i:s');
+    ?>
 </div>
-
