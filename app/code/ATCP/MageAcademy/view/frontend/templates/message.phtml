@@ -1,13 +1,58 @@
-<h1 style = "text-align: center">World clocks</h1>
-The current time in Warsaw is:
-<div style = "border: 2px solid black">
+<style>
+    h1 {
+        text-align: center
+    }
 
-    <?php
+    table, th, td {
+        border: 1px solid black;
+    }
 
-    /**
-     * @var ATCP\MageAcademy\Block\MySpeakingBlock $block
-     */
+    table {
+        alig
+    }
+</style>
+<h1>World clocks</h1>
+<table>
+    <tr>
+        <th>City</th>
+        <th>Time</th>
+    </tr>
+    <tr>
+        <td>Warsaw</td>
+        <td>
+            <?php
 
-    echo $block->saySomething();
-    ?>
-</div>
+            /**
+             * @var ATCP\MageAcademy\Block\MySpeakingBlock $block
+             */
+
+            echo $block->saySomething('Europe/Warsaw');
+            ?>
+        </td>
+    </tr>
+    <tr>
+        <td>New York</td>
+        <td>
+            <?php
+            echo $block->saySomething('America/New_York');
+            ?>
+        </td>
+    </tr>
+    <tr>
+        <td>Sydney</td>
+        <td>
+            <?php
+            echo $block->saySomething('Australia/Sydney');
+            ?>
+        </td>
+    </tr>
+    <tr>
+        <td>Tokyo</td>
+        <td>
+            <?php
+            echo $block->saySomething('Asia/Tokyo');
+            ?>
+        </td>
+    </tr>
+</table>
+
