@@ -13,10 +13,10 @@ class MySpeakingBlock extends Template
         parent::__construct($context);
     }
 
-    public function saySomething()
+    public function saySomething(string $timestamp)
     {
-        date_default_timezone_set('Europe/Warsaw');
-        $actualDate = date('Y-m-d H:i:s');
+        date_default_timezone_set($timestamp);
+        $actualDate = date('H:i:s');
         return __($actualDate);
     }
 }

@@ -1,24 +1,24 @@
 <?php
 
+
 namespace ATCP\MageAcademy\Controller\Index;
 
 use Magento\Framework\App\ActionInterface;
-use Magento\Framework\Controller\Result\JsonFactory;
+use Magento\Framework\View\Result\PageFactory;
 
 class Index implements ActionInterface
 {
-    private $jsonFactory;
+    private $pageFactory;
 
-    /**
-     * Index constructor.
-     */
-    public function __construct(JsonFactory $jsonFactory)
+    public function __construct(PageFactory $pageFactory)
     {
-        $this->jsonFactory = $jsonFactory;
+        $this->pageFactory = $pageFactory;
     }
 
     public function execute()
     {
-        return $this->jsonFactory->create()->setJsonData('Hello world!');
+        $page = $this->pageFactory->create();
+        $page->getConfig()->getTitle()->set('Hello World');
+        return $page;
     }
 }

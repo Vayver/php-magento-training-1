@@ -3,7 +3,6 @@
 
 namespace ATCP\MageAcademy\Model;
 
-
 class Product extends \Magento\Catalog\Model\Product
 {
     public function getPrice()

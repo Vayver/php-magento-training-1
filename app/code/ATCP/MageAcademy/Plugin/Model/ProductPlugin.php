@@ -1,5 +1,6 @@
 <?php
 
+
 namespace ATCP\MageAcademy\Plugin\Model;
 
 use \Magento\Catalog\Model\Product;

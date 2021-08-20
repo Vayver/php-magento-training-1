@@ -7,7 +7,6 @@ use Magento\Framework\Controller\Result\JsonFactory;
 use Magento\Catalog\Model\Product;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 
-
 class ProductList implements ActionInterface
 {
     private $jsonFactory;
