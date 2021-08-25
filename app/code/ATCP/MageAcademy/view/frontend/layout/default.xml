@@ -1,9 +1,17 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <referenceContainer name="content.top">
+    <referenceContainer name="content">
         <block class="Magento\Framework\View\Element\Template"
                name="mageacademy_default_custom_layout"
-               template="ATCP_MageAcademy::deftemplate.phtml"
-        />
+               template="ATCP_MageAcademy::deftemplate.phtml">
+            <arguments>
+                <argument name="background_color" xsi:type="string">
+                    #B6B6B6
+                </argument>
+                <argument name="color" xsi:type="string">
+                    lightskyblue
+                </argument>
+            </arguments>
+        </block>
     </referenceContainer>
 </page>
