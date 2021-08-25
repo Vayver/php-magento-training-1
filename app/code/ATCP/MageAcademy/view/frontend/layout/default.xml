@@ -6,7 +6,7 @@
                template="ATCP_MageAcademy::deftemplate.phtml">
             <arguments>
                 <argument name="background_color" xsi:type="string">
-                    #B6B6B6
+                    #000
                 </argument>
                 <argument name="color" xsi:type="string">
                     lightskyblue
