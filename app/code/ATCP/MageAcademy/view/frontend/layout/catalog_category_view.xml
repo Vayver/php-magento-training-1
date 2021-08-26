@@ -3,6 +3,6 @@
     <referenceContainer name="sidebar.main">
         <block class="Magento\Framework\View\Element\Template"
                name="custom_category_layout"
-               template="ATCP_MageAcademy::logintemplate.phtml" />
+               template="ATCP_MageAcademy::sidebar.phtml" />
     </referenceContainer>
 </page>
