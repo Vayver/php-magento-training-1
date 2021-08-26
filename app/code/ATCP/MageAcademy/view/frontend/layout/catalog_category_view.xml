@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="sidebar.main">
+        <block class="Magento\Framework\View\Element\Template"
+               name="custom_category_layout"
+               template="ATCP_MageAcademy::logintemplate.phtml" />
+    </referenceContainer>
+</page>
