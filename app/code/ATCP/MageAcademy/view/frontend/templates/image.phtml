@@ -12,11 +12,29 @@
     div {
         text-align: center;
     }
+
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
 </style>
 
 <h3>Product list</h3>
 
-<div>
-    <?php $block->getImageList()?>
-</div>
+<table>
+    <tr>
+        <th>Product ID</th>
+        <th>Product URL</th>
+        <th>Product Image</th>
+    </tr>
+
+    <?php foreach($block->getImageList() as $key => $image): ?>
+    <tr>
+        <td></td>
+        <td><?= $image; ?></td>
+        <td><img src="<?= $image; ?>" alt = ""></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+
 

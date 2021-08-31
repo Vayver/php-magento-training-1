@@ -16,8 +16,8 @@ class ImageListBlock extends Template
     public function __construct(CollectionFactory $collectionFactory, Context $context, StoreManagerInterface $storeManager)
     {
         $this->collectionFactory = $collectionFactory;
-        parent::__construct($context);
         $this->storeManager = $storeManager;
+        parent::__construct($context);
     }
 
     public function getProductCollection()
@@ -30,15 +30,14 @@ class ImageListBlock extends Template
 
     public function getImageList()
     {
+        $allImages = array();
         $directory = $this->storeManager->getStore()->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
         $list = $this->getProductCollection();
-        $counter = 1;
         foreach($list as $product) {
             $productImage = $product->getData('image');
             $imageUrl = $directory . 'catalog/product' . $productImage;
-            echo sprintf("Product %d : %s<br>", $counter, $imageUrl);
-            echo '<img src="'. $imageUrl .'"/>';
-            $counter++;
+            $allImages [] = $imageUrl;
         }
+        return $allImages;
     }
 }
