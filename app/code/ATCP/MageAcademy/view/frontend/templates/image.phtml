@@ -28,11 +28,11 @@
         <th>Product Image</th>
     </tr>
 
-    <?php foreach($block->getImageList() as $key => $image): ?>
+    <?php foreach($block->getImageList() as $key): ?>
     <tr>
-        <td></td>
-        <td><?= $image; ?></td>
-        <td><img src="<?= $image; ?>" alt = ""></td>
+        <td><?= $key['id']; ?></td>
+        <td><?= $key['imageUrl']; ?></td>
+        <td><img src="<?= $key['imageUrl']; ?>" alt = "<?= $key['name']; ?>"></td>
     </tr>
     <?php endforeach; ?>
 </table>

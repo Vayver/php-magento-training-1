@@ -35,8 +35,10 @@ class ImageListBlock extends Template
         $list = $this->getProductCollection();
         foreach($list as $product) {
             $productImage = $product->getData('image');
-            $imageUrl = $directory . 'catalog/product' . $productImage;
-            $allImages [] = $imageUrl;
+            $allImages [] = [
+                'id' => $product->getId(),
+                'name' => $product->getName(),
+                'imageUrl' => $directory . 'catalog/product' . $productImage];
         }
         return $allImages;
     }
