@@ -1,0 +1,9 @@
+<?php
+/**
+ * @var ATCP\MagentoORM\Block\StoreBlock $block
+ */
+?>
+
+<?php foreach($block->getList() as $key): ?>
+<?= "<b>STORE</b>: " . $key['storeName'] . " " . "<br><b>ROOT CATEGORY</b>: " . $key['rootCategoryName']?>
+<?php endforeach; ?>
